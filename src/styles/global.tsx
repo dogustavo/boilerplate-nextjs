@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import media from './breakpoints'
+import { breakpoints as media } from './variables'
 
 export default createGlobalStyle`
     *,
@@ -11,13 +11,15 @@ export default createGlobalStyle`
     html,
     body {
         font-family: 'Inter', 'sans-serif';
-        font-weight: 200;
+        font-weight: 400;
         font-size: 1rem;
         letter-spacing: 2px;
         line-height: normal;
         margin: 0px;
         padding: 0px;
         scroll-behavior: smooth;
+        overflow-x: hidden;
+        height: 100%;
 
         @media (min-width: ${media.small}) {
             font-size: 3vw;
